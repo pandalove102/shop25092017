@@ -1,0 +1,9 @@
+#Chong liet ke thu muc
+Options -Indexes
+
+#Rewrite duong dan (Regular Expression)
+RewriteEngine On
+
+RewriteRule ^dang-nhap\.html$ index.php?mod=login
+RewriteRule ^san-pham-c(\d+)\.html$ index.php?mod=list&cid=$1
+RewriteRule ^san-pham-(.*)-(\d+)\.html$ index.php?mod=detail&id=$2

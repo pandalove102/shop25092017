@@ -1,0 +1,7 @@
+#Chong liet ke thu muc
+Options -Indexes
+#Chong truy cap
+deny from all
+
+
+

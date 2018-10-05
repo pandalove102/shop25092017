@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#d1
+{
+	width:400px;
+	height:300px;
+	background-color:yellow;
+}
+</style>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script>
+function callAjax()
+{
+	
+	$.ajax({
+		url:'ajax.php',
+		method:'POST',
+		data:{email:$('#email').val()},
+		success:function(data){
+			$('#d1').html(data);
+		}
+	});
+}
+</script>
+</head>
+
+<body>
+<marquee> Testing AJAX Testing AJAX Testing AJAX Testing AJAX Testing AJAX </marquee>
+<input type="text" id="email" placeholder="Nhap email" onBlur="callAjax()">
+<div id="d1"></div>
+
+<button onClick="callAjax()">Click me</button>
+</body>
+</html>
